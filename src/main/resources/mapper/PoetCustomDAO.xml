@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="art.xingzou.listenpoetry.mapper.PoetCustomDAO">
+  <select id="favoriteList" parameterType="java.lang.Long" resultType="art.xingzou.listenpoetry.model.Poet">
+    select p.* from favorite f inner join poet p on f.subject_type=2 and f.subject_id=p.id where f.user_id=${value}
+  </select>
+</mapper>

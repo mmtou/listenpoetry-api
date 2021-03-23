@@ -1,0 +1,50 @@
+server:
+  port: 8002
+  servlet:
+    context-path: /lpapi
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/listen_poetry
+    username: root
+    password: root
+
+  jackson:
+    serialization:
+      write-dates-as-timestamps: true
+
+  redis:
+    database: 0
+    host: 127.0.0.1
+    password:
+    port: 6379
+    ssl: false
+    pool:
+      max-idle: 10
+      max-wait: 60000
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: false
+  supportMethodsArguments: true
+  params: count=countSql
+
+logging:
+  file: logs/listenpoetry.log
+  level.*: INFO
+
+baidu-speech:
+  app-id: xxxxxxx
+  api-key: xxxxxxxxxxxx
+  secret-key: xxxxxxxxxxx
+  ai-dir: /data/listen_poetry/ai/
+  spd: 3
+  pit: 5
+  vol: 5
+  per: 111
+
+app:
+  skip-auth-uris: /lpapi/poetry/list,/lpapi/poetry/detail,/lpapi/poet/list,/lpapi/poet/detail,/lpapi/recommend/list,/lpapi/feedback,/lpapi/search/list
