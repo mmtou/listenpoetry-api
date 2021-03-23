@@ -1,7 +1,10 @@
 # listen-poetry-api
 
 #### 介绍
-家书API
+听诗吧后端
+
+#### 前端地址
+[https://github.com/mmtou/listen_poetry_app](https://github.com/mmtou/listen_poetry_app)
 
 #### 软件架构
 软件架构说明
